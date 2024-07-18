@@ -1,5 +1,5 @@
 .App-header {
-  background-color: #021724;
+  background-color: #11171a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   font-size: 100%;
 }
 
-.email{  color: rgb(167, 214, 255);
+.email{  color: rgb(205, 232, 255);
 	
 }
 
