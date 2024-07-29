@@ -1,14 +1,33 @@
-.App-header {
-  background-color: #1d2a35;
-  min-height: 100vh;
+.App {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 100%;
+  min-height: 100vh;
 }
 
-.email{  color: rgb(155, 206, 250);
-	
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
 }
 
+.App-main {
+  flex: 1;
+  padding: 20px;
+}
+
+.email {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.email:hover {
+  color: #21a1f1;
+}
+
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+}
