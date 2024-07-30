@@ -1,69 +1,81 @@
+:root {
+  --primary-bg: #282c34;
+  --primary-text: white;
+  --accent-color: #61dafb;
+  --hover-color: #21a1f1;
+  --linkedin-color: #0077b5;
+  --linkedin-hover: #005582;
+}
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: white;
+  color: var(--primary-text);
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   padding: 20px;
-  color: white;
 }
 
 .App-main {
   flex: 1;
   padding: 20px;
-  background-color: #282c34;
-  color: white;
-
+  background-color: var(--primary-bg);
 }
 
 .email {
-  color: #61dafb;
+  color: var(--accent-color);
   text-decoration: none;
   font-size: 1.5em;
 }
 
 .email:hover {
-  color: #21a1f1;
+  color: var(--hover-color);
 }
 
 .App-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   padding: 20px;
 }
 
 .App-footer a {
-  color: white;
+  color: var(--primary-text);
   margin: 0 15px;
   font-size: 24px;
   text-decoration: none;
 }
 
 .App-footer a:hover {
-  color: #61dafb;
+  color: var(--accent-color);
 }
 
-/* Specific styles for GitHub and LinkedIn icons */
-.App-footer a.github {
-  color: #0077b5;
-  padding: 0 20px;
-}
-
-.App-footer a.github:hover {
-  color: #005582;
-}
-
+.App-footer a.github,
 .App-footer a.linkedin {
-  color: #0077b5;
+  color: var(--linkedin-color);
   padding: 0 20px;
 }
 
+.App-footer a.github:hover,
 .App-footer a.linkedin:hover {
-  color: #005582;
+  color: var(--linkedin-hover);
+}
+
+@media (max-width: 600px) {
+  .App-main {
+    padding: 10px;
+  }
+  
+  .email {
+    font-size: 1.2em;
+  }
+  
+  .App-footer a {
+    font-size: 20px;
+  }
 }
