@@ -15,7 +15,6 @@
   flex: 1;
   padding: 20px;
   background-color: #4c5463;
-
 }
 
 .email {
@@ -29,7 +28,39 @@
 }
 
 .App-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #282c34;
-  padding: 100px;
+  padding: 20px;
+}
+
+.App-footer a {
   color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  color: #61dafb;
+}
+
+/* Specific styles for GitHub and LinkedIn icons */
+.App-footer a.github {
+  color: #005582;
+  padding: 0 20px;
+}
+
+.App-footer a.github:hover {
+  color: #0077b5;
+}
+
+.App-footer a.linkedin {
+  color: #0077b5;
+  padding: 0 20px;
+}
+
+.App-footer a.linkedin:hover {
+  color: #005582;
 }

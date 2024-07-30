@@ -14,10 +14,10 @@ function App() {
         </a>
       </main>
       <footer className="App-footer">
-        <a href="https://www.linkedin.com/in/samuel-h-murray/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/samuel-h-murray/" className="linkedin" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/samuelhmurray" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/samuelhmurray" className="github" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github"></i>
         </a>
       </footer>
