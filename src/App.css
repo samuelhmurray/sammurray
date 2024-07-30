@@ -48,12 +48,12 @@
 
 /* Specific styles for GitHub and LinkedIn icons */
 .App-footer a.github {
-  color: #005582;
+  color: #0077b5;
   padding: 0 20px;
 }
 
 .App-footer a.github:hover {
-  color: #0077b5;
+  color: #005582;
 }
 
 .App-footer a.linkedin {
