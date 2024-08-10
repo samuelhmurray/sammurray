@@ -17,12 +17,12 @@
 
 .App-header {
   background-color: var(--primary-bg);
-  padding: 20px;
+  padding: 10px;
 }
 
 .App-main {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   background-color: var(--primary-bg);
 }
 
