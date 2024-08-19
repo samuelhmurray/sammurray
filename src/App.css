@@ -18,6 +18,7 @@
 .App-header {
   background-color: var(--primary-bg);
   padding: 10px;
+  text-align: center;
 }
 
 .App-main {
