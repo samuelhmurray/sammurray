@@ -9,7 +9,7 @@ const Header = () => (
 
 const Main = () => (
   <main className="App-main">
-    <p>email:</p>
+    <p>EMAIL:</p>
     <a className="email" href="mailto:me@sammurray.me">
       me@sammurray.me
     </a>
