@@ -17,7 +17,7 @@ const Main = () => (
 );
 
 const Footer = () => (
-  <a className="App-footer">
+  <footer className="App-footer">
     <a 
       href="https://www.linkedin.com/in/samuel-h-murray/" 
       className="linkedin" 
@@ -36,7 +36,7 @@ const Footer = () => (
     >
       <i className="fab fa-github"></i>
     </a>
-  </a>
+  </footer>
 );
 
 function App() {
