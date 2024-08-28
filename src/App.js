@@ -13,11 +13,6 @@ const Main = () => (
     <a className="email" href="mailto:me@sammurray.me">
       me@sammurray.me
     </a>
-  </main>
-);
-
-const Footer = () => (
-  <footer className="App-footer">
     <a 
       href="https://www.linkedin.com/in/samuel-h-murray/" 
       className="linkedin" 
@@ -36,6 +31,12 @@ const Footer = () => (
     >
       <i className="fab fa-github"></i>
     </a>
+  </main>
+);
+
+const Footer = () => (
+  <footer className="App-footer">
+
   </footer>
 );
 
