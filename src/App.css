@@ -9,8 +9,8 @@
 
 html, body {
   height: 100%;
-  margin: 10px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-bg);
-  padding: 5px;
+  padding: 10px;
 }
 
 .App-footer a {
