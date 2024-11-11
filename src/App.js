@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css";
-import logo from "../public/SM.png";
+import logo from "./SM.png";
 
 
 const Main = () => (
