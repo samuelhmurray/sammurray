@@ -19,40 +19,11 @@ html, body {
   color: var(--primary-text);
 }
 
-body {
-  font-family: Arial, sans-serif; /* Use a mobile-friendly font */
-}
-
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center;     /* Center content horizontally */
-  /* min-height: 100vh;
-  
-  max-width: 500px;       Limits width on larger screens */
-  padding: 20%;
+  padding: 50px;
   box-sizing: border-box;
-}
-
-a.email {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-size: 1.2em;        /* Larger font for easier clicking on mobile */
-}
-
-a.email:hover {
-  color: var(--hover-color);
-}
-
-/* Media Query for Extra Small Screens */
-@media (max-width: 480px) {
-  .App {
-    padding: 8px;        /* Less padding for very small screens */
-    max-width: 100%;     /* Full width on tiny screens */
-  }
-  
-  a.email {
-    font-size: 1em;      /* Adjust font size for readability on tiny screens */
-  }
 }
