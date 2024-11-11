@@ -28,10 +28,10 @@ body {
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center;     /* Center content horizontally */
-  min-height: 100vh;
-  width: 60%;
-  max-width: 500px;       /* Limits width on larger screens */
-  padding: 16px;
+  /* min-height: 100vh;
+  
+  max-width: 500px;       Limits width on larger screens */
+  padding: 20%;
   box-sizing: border-box;
 }
 
