@@ -1,10 +1,6 @@
 :root {
   --primary-bg: #000000;
   --primary-text: white;
-  --accent-color: #61dafb;
-  --hover-color: #21a1f1;
-  --linkedin-color: #0077b5;
-  --linkedin-hover: #005582;
 }
 
 html, body {
@@ -12,18 +8,39 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
   background-color: var(--primary-bg);
   color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center;     /* Center content horizontally */
-  padding: 50px;
+  justify-content: center;   /* Center content vertically */
+  align-items: center;       /* Center content horizontally */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 500px;          /* Constrains width on larger screens */
+  padding: 20px;
   box-sizing: border-box;
+  text-align: center;        /* Center text and content */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+  .App {
+    padding: 16px;           /* Smaller padding on mobile */
+  }
+}
+
+@media (max-width: 400px) {
+  .App {
+    padding: 10px;           /* Further reduce padding for extra small screens */
+  }
 }
