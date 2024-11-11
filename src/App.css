@@ -1,6 +1,5 @@
 :root {
   --primary-bg: #000000;
-  --primary-text: white;
 }
 
 html, body {
@@ -9,10 +8,9 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: var(--primary-bg);
-  color: var(--primary-text);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
 }
 
 body {
@@ -21,26 +19,16 @@ body {
 
 .App {
   display: flex;
-  flex-direction: column;
-  justify-content: center;   /* Center content vertically */
-  align-items: center;       /* Center content horizontally */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   width: 100%;
-  max-width: 500px;          /* Constrains width on larger screens */
-  padding: 20px;
+  padding: 0; /* Remove padding */
   box-sizing: border-box;
-  text-align: center;        /* Center text and content */
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 600px) {
-  .App {
-    padding: 16px;           /* Smaller padding on mobile */
-  }
-}
-
-@media (max-width: 400px) {
-  .App {
-    padding: 10px;           /* Further reduce padding for extra small screens */
-  }
+.App img {
+  max-width: 90%;  /* Ensure the image doesn't stretch too wide */
+  max-height: 90%; /* Ensure the image doesn't stretch too tall */
+  object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
