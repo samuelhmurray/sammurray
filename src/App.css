@@ -19,12 +19,14 @@ body {
 }
 
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
   min-height: 100vh;
-  color: var(--primary-text);
   background-color: var(--primary-bg);
+  padding: 16px;           /* Add padding for mobile */
+  box-sizing: border-box;
 }
 
 .App-header {
@@ -43,8 +45,7 @@ body {
   color: var(--accent-color);
   text-decoration: none;
   font-size: 1.5em;
-}
-
+} 
 .email:hover {
   color: var(--hover-color);
 }
@@ -91,4 +92,4 @@ body {
   .App-footer a {
     font-size: 20px;
   }
-}
+}  

@@ -3,18 +3,13 @@ import "./App.css";
 import logo from "./SM.png";
 
 
-const Main = () => (
-  <main className="App-main">
-    <a className="email" href="mailto:me@sammurray.me">
-      <img src={logo} alt="Sam Murray logo" />
-    </a>
-  </main>
-);
 
 function App() {
   return (
     <div className="App">
-      <Main />
+    <a className="email" href="mailto:me@sammurray.me">
+      <img src={logo} alt="Sam Murray logo" />
+    </a>
     </div>
   );
 }
