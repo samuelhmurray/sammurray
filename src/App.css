@@ -22,7 +22,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* full viewport height */
+  height: 100vh;
   width: 100%;
   padding: 0;
 }
@@ -40,9 +40,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: clamp(30px, 5vw, 100px); /* gap scales with viewport */
   position: relative;
-  padding: 0 50px; /* space for horizontal lines on desktop */
+  padding: 0 5vw; /* keeps lines away from edges */
 }
 
 /* Horizontal lines for desktop */
@@ -50,10 +50,11 @@ html, body {
 .circle-container::after {
   content: '';
   position: absolute;
-  width: 50px;      /* line length */
-  height: 3px;      /* line thickness */
+  width: clamp(40px, 8vw, 120px); /* line length scales with viewport */
+  height: 3px; /* line thickness */
   background-color: #f1c233;
   top: 50%;
+  transform: translateY(-50%);
 }
 
 .circle-container::before {
@@ -71,14 +72,14 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
+  width: clamp(120px, 15vw, 250px);   /* scales naturally */
+  height: clamp(120px, 15vw, 250px);
   border: 3px solid #495668;
   border-radius: 50%;
   text-align: center;
   font-family: 'Sora', Arial, sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   text-decoration: none;
   color: #495668;
   transition: transform 0.2s, border-color 0.2s, color 0.2s;
@@ -95,7 +96,7 @@ html, body {
 /* ===================================== */
 .coming-soon {
   font-family: 'Sora', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #f1c233;
   text-align: center;
@@ -108,7 +109,7 @@ html, body {
   .circle-container {
     flex-direction: column; /* stack circles vertically */
     gap: 20px;
-    padding: 50px 0; /* space for vertical lines */
+    padding: 50px 0;
   }
 
   /* Vertical lines for mobile */
@@ -130,8 +131,8 @@ html, body {
   }
 
   .circle {
-    width: 120px;
-    height: 120px;
-    font-size: 0.9rem;
+    width: 240px;
+    height: 240px;
+    font-size: 1.8rem;
   }
 }
