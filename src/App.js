@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="App">
       <div className="circle-container">
-        <a className="circle" href="/about">ABOUT</a>
+        <a className="circle" href="/ABOUT">ABOUT</a>
         <a className="circle" href="mailto:me@sammurray.me">CONTACT</a>
         <a className="circle" href="/WIP">WIP</a>
       </div>
