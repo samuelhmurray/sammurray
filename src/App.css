@@ -1,5 +1,4 @@
 :root {
-  --primary-bg: #000000;
 }
 
 html, body {
@@ -7,14 +6,12 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-bg);
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-}
-
-body {
-  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Sora', Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 .App {
@@ -23,12 +20,77 @@ body {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  padding: 0; /* Remove padding */
-  box-sizing: border-box;
+  padding: 0;
 }
 
-.App img {
-  max-width: 90%;  /* Ensure the image doesn't stretch too wide */
-  max-height: 90%; /* Ensure the image doesn't stretch too tall */
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
+/* Circle container with accent lines */
+.circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  padding: 0 50px; /* space for the lines */
+}
+
+.circle-container::before,
+.circle-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;      /* length of the line */
+  height: 3px;      /* thickness of the line */
+  background-color: #f1c233;
+}
+
+.circle-container::before {
+  left: 0;
+}
+
+.circle-container::after {
+  right: 0;
+}
+
+/* Circle styling */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 50%;
+  text-align: center;
+  font-family: 'Sora', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  border-color: #f1c233;
+  color: #f1c233;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .circle-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .circle-container::before,
+  .circle-container::after {
+    display: none; /* hide lines on small screens */
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 0.9rem;
+  }
 }

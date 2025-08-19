@@ -1,12 +1,14 @@
 import React from 'react';
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <a className="email" href="mailto:me@sammurray.me">
-        Coming Soon
-      </a>
+      <div className="circle-container">
+        <a className="circle" href="/about">ABOUT</a>
+        <a className="circle" href="mailto:me@sammurray.me">CONTACT</a>
+        <a className="circle" href="/WIP">WIP</a>
+      </div>
     </div>
   );
 }
