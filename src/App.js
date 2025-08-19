@@ -1,7 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <div className="circle-container">
@@ -10,6 +11,26 @@ function App() {
         <a className="circle" href="/WIP">WIP</a>
       </div>
     </div>
+  );
+}
+
+function ComingSoon({ pageName }) {
+  return (
+    <div className="App">
+      <h1 className="coming-soon">{pageName} - Coming Soon!</h1>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<ComingSoon pageName="About" />} />
+        <Route path="/WIP" element={<ComingSoon pageName="WIP" />} />
+      </Routes>
+    </Router>
   );
 }
 
