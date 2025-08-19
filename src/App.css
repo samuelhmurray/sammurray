@@ -109,7 +109,7 @@ html, body {
   .circle-container {
     flex-direction: column; /* stack circles vertically */
     gap: 20px;
-    padding: 50px 0;
+    padding: 50px 0; /* space for vertical lines */
   }
 
   /* Vertical lines for mobile */
@@ -131,8 +131,8 @@ html, body {
   }
 
   .circle {
-    width: 240px;
-    height: 240px;
-    font-size: 1.8rem;
+    width: clamp(120px, 25vw, 180px);   /* scales naturally for mobile */
+    height: clamp(120px, 25vw, 180px);
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
   }
 }
