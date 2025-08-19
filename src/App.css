@@ -1,3 +1,6 @@
+/* ===================================== */
+/* Base styles */
+/* ===================================== */
 :root {
 }
 
@@ -11,7 +14,7 @@ html, body {
   align-items: center;
   box-sizing: border-box;
   font-family: 'Sora', Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* subtle background */
 }
 
 .App {
@@ -22,32 +25,34 @@ html, body {
   width: 100%;
   padding: 0;
 }
-.coming-soon {
-  font-family: 'Sora', Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f1c233;
-  text-align: center;
+
+.App img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
+/* ===================================== */
 /* Circle container with accent lines */
+/* ===================================== */
 .circle-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 50px;
   position: relative;
-  padding: 0 50px; /* space for the lines */
+  padding: 0 50px; /* space for horizontal lines on desktop */
 }
 
+/* Horizontal lines for desktop */
 .circle-container::before,
 .circle-container::after {
   content: '';
   position: absolute;
-  top: 50%;
-  width: 50px;      /* length of the line */
-  height: 3px;      /* thickness of the line */
+  width: 50px;      /* line length */
+  height: 3px;      /* line thickness */
   background-color: #f1c233;
+  top: 50%;
 }
 
 .circle-container::before {
@@ -58,7 +63,9 @@ html, body {
   right: 0;
 }
 
+/* ===================================== */
 /* Circle styling */
+/* ===================================== */
 .circle {
   display: flex;
   justify-content: center;
@@ -82,17 +89,43 @@ html, body {
   color: #f1c233;
 }
 
+/* ===================================== */
+/* Coming Soon page styling */
+/* ===================================== */
+.coming-soon {
+  font-family: 'Sora', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1c233;
+  text-align: center;
+}
+
+/* ===================================== */
 /* Responsive adjustments */
+/* ===================================== */
 @media (max-width: 500px) {
   .circle-container {
-    flex-direction: column;
+    flex-direction: column; /* stack circles vertically */
     gap: 20px;
-    padding: 0;
+    padding: 50px 0; /* space for vertical lines */
   }
 
+  /* Vertical lines for mobile */
   .circle-container::before,
   .circle-container::after {
-    display: none; /* hide lines on small screens */
+    width: 3px;       /* line thickness */
+    height: 50px;     /* line length */
+    top: auto;
+    left: 50%;        /* center horizontally */
+    transform: translateX(-50%);
+  }
+
+  .circle-container::before {
+    top: 0;           /* top line */
+  }
+
+  .circle-container::after {
+    bottom: 0;        /* bottom line */
   }
 
   .circle {
