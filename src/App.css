@@ -1,21 +1,18 @@
 /* ===================================== */
 /* Base styles */
 /* ===================================== */
-:root {
-}
-
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   font-family: 'Sora', Arial, sans-serif;
-  background-color: #f0f0f0; /* subtle background */
+  background-color: #f0f0f0;
 }
 
 .App {
@@ -27,57 +24,48 @@ html, body {
   padding: 0;
 }
 
-.App img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-}
-
 /* ===================================== */
-/* Circle container with accent lines */
+/* Circle container (Home page) */
 /* ===================================== */
 .circle-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(30px, 5vw, 100px); /* gap scales with viewport */
+  gap: clamp(30px, 5vw, 100px);
   position: relative;
-  padding: 0 5vw; /* keeps lines away from edges */
+  padding: 0 5vw;
+  flex-direction: row; /* default: horizontal layout */
 }
 
-/* Horizontal lines for desktop */
 .circle-container::before,
 .circle-container::after {
   content: '';
   position: absolute;
-  width: clamp(40px, 8vw, 120px); /* line length scales with viewport */
-  height: 3px; /* line thickness */
   background-color: #f1c233;
+}
+
+/* Default = horizontal lines */
+.circle-container::before,
+.circle-container::after {
+  width: clamp(40px, 8vw, 120px);
+  height: 3px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.circle-container::before {
-  left: 0;
-}
+.circle-container::before { left: 0; }
+.circle-container::after { right: 0; }
 
-.circle-container::after {
-  right: 0;
-}
-
-/* ===================================== */
-/* Circle styling */
-/* ===================================== */
+/* Circles themselves */
 .circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(120px, 15vw, 250px);   /* scales naturally */
+  width: clamp(120px, 15vw, 250px);
   height: clamp(120px, 15vw, 250px);
   border: 3px solid #495668;
   border-radius: 50%;
   text-align: center;
-  font-family: 'Sora', Arial, sans-serif;
   font-weight: 600;
   font-size: clamp(1rem, 2vw, 1.5rem);
   text-decoration: none;
@@ -92,10 +80,9 @@ html, body {
 }
 
 /* ===================================== */
-/* Coming Soon page styling */
+/* Coming Soon page */
 /* ===================================== */
 .coming-soon {
-  font-family: 'Sora', Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #f1c233;
@@ -103,36 +90,116 @@ html, body {
 }
 
 /* ===================================== */
-/* Responsive adjustments */
+/* About page */
 /* ===================================== */
-@media (max-width: 500px) {
+.about-page {
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 900px;
+  width: 90vw;
+  padding-left: 40px; /* space for left line */
+  box-sizing: border-box;
+  margin: 0 auto; /* centers content */
+}
+
+.line-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background-color: #f1c233;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.line-left:hover {
+  background-color: #4a5669;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(20px, 5vw, 60px);
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+}
+
+.about-photo {
+  width: clamp(140px, 25vw, 220px);
+  height: clamp(140px, 25vw, 220px);
+  border-radius: 50%;
+  border: 3px solid #495668;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 10px;
+  color: #495668;
+}
+
+.about-text p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  color: #495668;
+}
+
+/* ===================================== */
+/* Responsive tweaks */
+/* ===================================== */
+@media (max-width: 700px) {
+  /* Home page: switch to vertical */
   .circle-container {
-    flex-direction: column; /* stack circles vertically */
-    gap: 20px;
-    padding: 50px 0; /* space for vertical lines */
+    flex-direction: column;
+    padding: 5vh 0;
   }
 
-  /* Vertical lines for mobile */
   .circle-container::before,
   .circle-container::after {
-    width: 3px;       /* line thickness */
-    height: 50px;     /* line length */
+    width: 3px;
+    height: clamp(40px, 8vh, 120px);
+    left: 50%;
     top: auto;
-    left: 50%;        /* center horizontally */
     transform: translateX(-50%);
   }
 
-  .circle-container::before {
-    top: 0;           /* top line */
+  .circle-container::before { top: 0; }
+  .circle-container::after { bottom: 0; }
+
+  /* About page padding fix */
+  .about-container {
+    padding: 0 20px;
   }
 
-  .circle-container::after {
-    bottom: 0;        /* bottom line */
+  .about-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
 
-  .circle {
-    width: clamp(120px, 25vw, 180px);   /* scales naturally for mobile */
-    height: clamp(120px, 25vw, 180px);
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  .about-photo {
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    text-align: left;
+    padding: 0 10px; /* keeps text off screen edges */
   }
 }
