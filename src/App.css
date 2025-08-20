@@ -139,7 +139,6 @@ html, body {
   width: clamp(140px, 25vw, 220px);
   height: clamp(140px, 25vw, 220px);
   border-radius: 50%;
-  border: 3px solid #495668;
   object-fit: cover;
   flex-shrink: 0;
   transition: transform 0.2s, border-color 0.2s;
