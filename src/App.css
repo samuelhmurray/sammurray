@@ -41,7 +41,7 @@ html, body {
 .circle-container::after {
   content: '';
   position: absolute;
-  background-color: #f1c233;
+  background-color: #ffd000;
 }
 
 /* Default = horizontal lines */
@@ -75,8 +75,8 @@ html, body {
 
 .circle:hover {
   transform: scale(1.1);
-  border-color: #f1c233;
-  color: #f1c233;
+  border-color: #ffd000;
+  color: #ffd000;
 }
 
 /* ===================================== */
@@ -85,7 +85,7 @@ html, body {
 .coming-soon {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  color: #f1c233;
+  color: #ffd000;
   text-align: center;
 }
 
@@ -116,7 +116,7 @@ html, body {
   bottom: 0;
   left: 0;
   width: 3px;
-  background-color: #f1c233;
+  background-color: #ffd000;
   cursor: pointer;
   transition: background-color 0.2s;
 }
