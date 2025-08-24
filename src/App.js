@@ -8,11 +8,20 @@ function Home() {
       <div className="circle-container">
         <a className="circle" href="/about">ABOUT</a>
         <a className="circle" href="mailto:me@sammurray.me">CONTACT</a>
-        <a className="circle" href="/WIP">WIP</a>
+        {/* Link directly to the PDF */}
+        <a 
+          className="circle" 
+          href="/Portfolio%20for%20Site.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          WIP
+        </a>
       </div>
     </div>
   );
 }
+
 
 function About() {
   return (
