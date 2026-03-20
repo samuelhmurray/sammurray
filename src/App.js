@@ -16,7 +16,7 @@ function Home() {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          WIP
+          WORK
         </a>
       </div>
     </div>
