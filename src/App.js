@@ -11,8 +11,7 @@ function Home() {
         {/* Link directly to the PDF */}
         <a 
           className="circle" 
-          href="/Users/sammurray/workspace/sammurray/src/App.js
-/Users/sammurray/workspace/sammurray/public/Portfolio for Application (1).pdf" 
+          href="/Portfolio%20for%20Site.pdf" 
           target="_blank" 
           rel="noopener noreferrer"
         >
@@ -22,7 +21,6 @@ function Home() {
     </div>
   );
 }
-
 
 function About() {
   return (
