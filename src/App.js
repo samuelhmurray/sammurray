@@ -11,7 +11,7 @@ function Home() {
         {/* Link directly to the PDF */}
         <a 
           className="circle" 
-          href="/Portfolio%20for%20Site.pdf" 
+          href="/Portfolio%20for%20Application.pdf" 
           target="_blank" 
           rel="noopener noreferrer"
         >
