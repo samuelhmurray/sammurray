@@ -36,7 +36,7 @@ function About() {
           />
           <div className="about-text">
             <p>
-I am a designer and student who is interested in creating work that incites community, enables care, and invites those who interact into a deeper conversation or connection. I am influenced and inspired both by my upbringing in Appalachia as well as my hands-on experience working with metal, concrete, wood, and textiles.             </p>
+I am a designer and student who is interested in creating work that incites community, enables care, and invites those who interact into a deeper conversation or connection. I am influenced and inspired by both my upbringing in Appalachia as well as my hands-on experience working with metal, concrete, wood, and textiles.             </p>
           </div>
         </div>
       </div>
